@@ -27,8 +27,7 @@
             <div class="tab" data-tab="4">Growth & Development</div>
         </div>
 
-        <form id="employee-survey" method="POST">
-            
+        <form id="employee-survey" action="submit_survey.php" method="POST">
             <!-- Section 1: Job Satisfaction -->
             <div class="survey-section" id="section-1">
                 <h2 class="section-title">Job Satisfaction</h2>
@@ -315,7 +314,7 @@
 
                 <div class="button-group">
                     <button type="button" class="btn btn-secondary" id="btn-back-section-4">Previous</button>
-                    <button type="submit" class="btn btn-submit" >Submit Survey</button>
+                    <button type="button" class="btn btn-submit" onclick="submitSurvey()">Submit Survey</button>
                 </div>
                 <div id="form-status-message" style="margin-top: 20px;text-align: center; font-weight: bold;"></div>
 
@@ -323,29 +322,18 @@
         </form>
     </div>
     <script>
-        document.getElementById("employee-survey").addEventListener("submit", function (e) {
-    e.preventDefault(); // Stop default form submission
+    function submitSurvey() {
+        const form = document.getElementById("employee-survey");
+        
+        // Optional: simple validation before submission
+        if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+        }
 
-    const form = e.target;
-    const formData = new FormData(form);
-
-    fetch('submit_survey.php', {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => response.text()) // Expect plain text from PHP
-    .then(data => {
-        const statusDiv = document.getElementById("form-status-message");
-        statusDiv.innerHTML = data;
-
-        // Optionally scroll to message
-        statusDiv.scrollIntoView({ behavior: 'smooth' });
-    })
-    .catch(error => {
-        document.getElementById("form-status-message").innerHTML = "An error occurred. Please try again.";
-        console.error("Error submitting form:", error);
-    });
-});
+        // Submit the form
+        form.submit();
+    }
     </script>
     <script src="asset/script.js"></script>
 </body>
