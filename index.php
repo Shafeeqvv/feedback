@@ -36,33 +36,33 @@
                     <label>How satisfied are you with your current role?</label>
                     <div class="rating-scale">
                         <div class="rating-option">
-                            <input type="radio" id="satisfaction-1" name="Job_Role_Satisfaction_Rate" value="1" required>
+                            <input type="radio" id="satisfaction-1" name="roleSatisfaction" value="1" required>
                             <label for="satisfaction-1">
                                 <div class="rating-circle">1</div>
                                 <div class="rating-text">Very Poor</div>
                             </label>
                         </div>
                         <div class="rating-option">
-                            <input type="radio" id="satisfaction-2" name="Job_Role_Satisfaction_Rate" value="2">
+                            <input type="radio" id="satisfaction-2" name="roleSatisfaction" value="2">
                             <label for="satisfaction-2">
                                 <div class="rating-circle">2</div>
                             </label>
                         </div>
                         <div class="rating-option">
-                            <input type="radio" id="satisfaction-3" name="Job_Role_Satisfaction_Rate" value="3">
+                            <input type="radio" id="satisfaction-3" name="roleSatisfaction" value="3">
                             <label for="satisfaction-3">
                                 <div class="rating-circle">3</div>
                                 <div class="rating-text">Average</div>
                             </label>
                         </div>
                         <div class="rating-option">
-                            <input type="radio" id="satisfaction-4" name="Job_Role_Satisfaction_Rate" value="4">
+                            <input type="radio" id="satisfaction-4" name="roleSatisfaction" value="4">
                             <label for="satisfaction-4">
                                 <div class="rating-circle">4</div>
                             </label>
                         </div>
                         <div class="rating-option">
-                            <input type="radio" id="satisfaction-5" name="Job_Role_Satisfaction_Rate" value="5">
+                            <input type="radio" id="satisfaction-5" name="roleSatisfaction" value="5">
                             <label for="satisfaction-5">
                                 <div class="rating-circle">5</div>
                                 <div class="rating-text">Excellent</div>
@@ -76,33 +76,33 @@
                     <label>How would you rate your work-life balance?</label>
                     <div class="rating-scale">
                         <div class="rating-option">
-                            <input type="radio" id="balance-1" name="Work_Life_Balance_Rate" value="1" required>
+                            <input type="radio" id="balance-1" name="workLifeBalance" value="1" required>
                             <label for="balance-1">
                                 <div class="rating-circle">1</div>
                                 <div class="rating-text">Very Poor</div>
                             </label>
                         </div>
                         <div class="rating-option">
-                            <input type="radio" id="balance-2" name="Work_Life_Balance_Rate" value="2">
+                            <input type="radio" id="balance-2" name="workLifeBalance" value="2">
                             <label for="balance-2">
                                 <div class="rating-circle">2</div>
                             </label>
                         </div>
                         <div class="rating-option">
-                            <input type="radio" id="balance-3" name="Work_Life_Balance_Rate" value="3">
+                            <input type="radio" id="balance-3" name="workLifeBalance" value="3">
                             <label for="balance-3">
                                 <div class="rating-circle">3</div>
                                 <div class="rating-text">Average</div>
                             </label>
                         </div>
                         <div class="rating-option">
-                            <input type="radio" id="balance-4" name="Work_Life_Balance_Rate" value="4">
+                            <input type="radio" id="balance-4" name="workLifeBalance" value="4">
                             <label for="balance-4">
                                 <div class="rating-circle">4</div>
                             </label>
                         </div>
                         <div class="rating-option">
-                            <input type="radio" id="balance-5" name="Work_Life_Balance_Rate" value="5">
+                            <input type="radio" id="balance-5" name="workLifeBalance" value="5">
                             <label for="balance-5">
                                 <div class="rating-circle">5</div>
                                 <div class="rating-text">Excellent</div>
@@ -116,27 +116,27 @@
                     <label>What aspects of your job do you enjoy the most? (Select all that apply)</label>
                     <div class="checkbox-group">
                         <div class="checkbox-option">
-                            <input type="checkbox" id="enjoy-team" name="Job_enjoyment[]" value="team">
+                            <input type="checkbox" id="enjoy-team" name="enjoyment" value="team">
                             <label for="enjoy-team">Working with my team</label>
                         </div>
                         <div class="checkbox-option">
-                            <input type="checkbox" id="enjoy-work" name="Job_enjoyment[]" value="work">
+                            <input type="checkbox" id="enjoy-work" name="enjoyment" value="work">
                             <label for="enjoy-work">The work itself</label>
                         </div>
                         <div class="checkbox-option">
-                            <input type="checkbox" id="enjoy-learning" name="Job_enjoyment[]" value="learning">
+                            <input type="checkbox" id="enjoy-learning" name="enjoyment" value="learning">
                             <label for="enjoy-learning">Learning opportunities</label>
                         </div>
                         <div class="checkbox-option">
-                            <input type="checkbox" id="enjoy-impact" name="Job_enjoyment[]" value="impact">
+                            <input type="checkbox" id="enjoy-impact" name="enjoyment" value="impact">
                             <label for="enjoy-impact">Making an impact</label>
                         </div>
                         <div class="checkbox-option">
-                            <input type="checkbox" id="enjoy-autonomy" name="Job_enjoyment[]" value="autonomy">
+                            <input type="checkbox" id="enjoy-autonomy" name="enjoyment" value="autonomy">
                             <label for="enjoy-autonomy">Autonomy</label>
                         </div>
                         <div class="checkbox-option">
-                            <input type="checkbox" id="enjoy-compensation" name="Job_enjoyment[]" value="compensation">
+                            <input type="checkbox" id="enjoy-compensation" name="enjoyment" value="compensation">
                             <label for="enjoy-compensation">Compensation & benefits</label>
                         </div>
                     </div>
@@ -155,33 +155,33 @@
                     <label>How would you rate our company culture?</label>
                     <div class="rating-scale">
                         <div class="rating-option">
-                            <input type="radio" id="culture-1" name="Company_Culture_Rate" value="1" required>
+                            <input type="radio" id="culture-1" name="companyCulture" value="1" required>
                             <label for="culture-1">
                                 <div class="rating-circle">1</div>
                                 <div class="rating-text">Very Poor</div>
                             </label>
                         </div>
                         <div class="rating-option">
-                            <input type="radio" id="culture-2" name="Company_Culture_Rate" value="2">
+                            <input type="radio" id="culture-2" name="companyCulture" value="2">
                             <label for="culture-2">
                                 <div class="rating-circle">2</div>
                             </label>
                         </div>
                         <div class="rating-option">
-                            <input type="radio" id="culture-3" name="Company_Culture_Rate" value="3">
+                            <input type="radio" id="culture-3" name="companyCulture" value="3">
                             <label for="culture-3">
                                 <div class="rating-circle">3</div>
                                 <div class="rating-text">Average</div>
                             </label>
                         </div>
                         <div class="rating-option">
-                            <input type="radio" id="culture-4" name="Company_Culture_Rate" value="4">
+                            <input type="radio" id="culture-4" name="companyCulture" value="4">
                             <label for="culture-4">
                                 <div class="rating-circle">4</div>
                             </label>
                         </div>
                         <div class="rating-option">
-                            <input type="radio" id="culture-5" name="Company_Culture_Rate" value="5">
+                            <input type="radio" id="culture-5" name="companyCulture" value="5">
                             <label for="culture-5">
                                 <div class="rating-circle">5</div>
                                 <div class="rating-text">Excellent</div>
@@ -195,19 +195,19 @@
                     <label>Do you feel your contributions are recognized and valued?</label>
                     <div class="radio-group">
                         <div class="radio-option">
-                            <input type="radio" id="recognition-yes" name="Contributions_are_recognized_and_Valued" value="yes" required>
+                            <input type="radio" id="recognition-yes" name="recognition" value="yes" required>
                             <label for="recognition-yes">Yes, regularly</label>
                         </div>
                         <div class="radio-option">
-                            <input type="radio" id="recognition-sometimes" name="Contributions_are_recognized_and_Valued" value="sometimes">
+                            <input type="radio" id="recognition-sometimes" name="recognition" value="sometimes">
                             <label for="recognition-sometimes">Sometimes</label>
                         </div>
                         <div class="radio-option">
-                            <input type="radio" id="recognition-rarely" name="Contributions_are_recognized_and_Valued" value="rarely">
+                            <input type="radio" id="recognition-rarely" name="recognition" value="rarely">
                             <label for="recognition-rarely">Rarely</label>
                         </div>
                         <div class="radio-option">
-                            <input type="radio" id="recognition-no" name="Contributions_are_recognized_and_Valued" value="no">
+                            <input type="radio" id="recognition-no" name="recognition" value="no">
                             <label for="recognition-no">No, not at all</label>
                         </div>
                     </div>
@@ -216,7 +216,7 @@
 
                 <div class="form-group">
                     <label for="culture-improvement">What is one thing we could improve about our company culture?</label>
-                    <textarea id="culture-improvement" name="Company_Culture_Improvement" placeholder="Share your thoughts..."></textarea>
+                    <textarea id="culture-improvement" name="cultureImprovement" placeholder="Share your thoughts..."></textarea>
                 </div>
 
                 <div class="button-group">
@@ -255,7 +255,7 @@
                 </div>
                 <div class="form-group">
                     <label>Is there any challenges with Employees?</label>
-                    <textarea name="Employee_challenges" placeholder="Share your thoughts..."></textarea>
+                    <textarea name="Concern_" placeholder="Share your thoughts..."></textarea>
                 </div>
                 <div class="button-group">
                     <button type="button" class="btn btn-secondary" id="btn-back-section-3">Previous</button>
@@ -268,36 +268,36 @@
                 <h2 class="section-title">Growth & Development</h2>
                 <!-- unchanged original growth HTML -->
                 <div class="form-group">
-                    <label>How satisfied are you with the Learning and development opportunities available to you?</label>
+                    <label>How satisfied are you with the learning and development opportunities available to you?</label>
                     <div class="rating-scale">
                         <div class="rating-option">
-                            <input type="radio" id="development-1" name="Learning_and_development_opportunities" value="1" required>
+                            <input type="radio" id="development-1" name="developmentOpportunities" value="1" required>
                             <label for="development-1">
                                 <div class="rating-circle">1</div>
                                 <div class="rating-text">Very Poor</div>
                             </label>
                         </div>
                         <div class="rating-option">
-                            <input type="radio" id="development-2" name="Learning_and_development_opportunities" value="2">
+                            <input type="radio" id="development-2" name="developmentOpportunities" value="2">
                             <label for="development-2">
                                 <div class="rating-circle">2</div>
                             </label>
                         </div>
                         <div class="rating-option">
-                            <input type="radio" id="development-3" name="Learning_and_development_opportunities" value="3">
+                            <input type="radio" id="development-3" name="developmentOpportunities" value="3">
                             <label for="development-3">
                                 <div class="rating-circle">3</div>
                                 <div class="rating-text">Average</div>
                             </label>
                         </div>
                         <div class="rating-option">
-                            <input type="radio" id="development-4" name="Learning_and_development_opportunities" value="4">
+                            <input type="radio" id="development-4" name="developmentOpportunities" value="4">
                             <label for="development-4">
                                 <div class="rating-circle">4</div>
                             </label>
                         </div>
                         <div class="rating-option">
-                            <input type="radio" id="development-5" name="Learning_and_development_opportunities" value="5">
+                            <input type="radio" id="development-5" name="developmentOpportunities" value="5">
                             <label for="development-5">
                                 <div class="rating-circle">5</div>
                                 <div class="rating-text">Excellent</div>
@@ -309,7 +309,7 @@
 
                 <div class="form-group">
                     <label for="skills-development">Other Comments</label>
-                    <textarea id="skills-development" name="Other_Comments" placeholder="Describe..."></textarea>
+                    <textarea id="skills-development" name="Other_Comment" placeholder="Describe..."></textarea>
                 </div>
 
                 <div class="button-group">
@@ -317,30 +317,12 @@
                     <input type="submit" class="btn btn-submit">Submit Survey</button>
                 </div>
 
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_subject" value="New Employee Survey Submission">
+                
+              
+
             </div>
         </form>
     </div>
     <script src="asset/script.js"></script>
-    <script>
-            document.getElementById('employee-survey').addEventListener('submit', function(e) {
-                e.preventDefault();
-
-                let enjoymentList = Array.from(document.querySelectorAll('input[name="Job_enjoyment[]"]:checked'))
-                                          .map(cb => cb.value)
-                                          .join(', ');
-
-                let formData = new FormData(this);
-                formData.set('Job_enjoyment[]', enjoymentList); // replace array with string
-
-                fetch("https://formsubmit.co/ajax/shafeeqsharafi@gmail.com", {
-                    method: "POST",
-                    body: formData
-                })
-                .then(res => res.ok ? alert("✅ Feedback sent!") : alert("❌ Error sending feedback"));
-            });
-
-    </script>
 </body>
 </html>
