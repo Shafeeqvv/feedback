@@ -316,7 +316,7 @@
                     <button type="button" class="btn btn-secondary" id="btn-back-section-4">Previous</button>
                     <input type="submit" class="btn btn-submit">Submit Survey</button>
                 </div>
-
+                <input type="hidden" name="_template" value="table">
                 <input type="hidden" name="_captcha" value="false">
                 <input type="hidden" name="_subject" value="New Employee Survey Submission">
             </div>
@@ -324,77 +324,37 @@
     </div>
     <script src="asset/script.js"></script>
     <script>
-document.getElementById('employee-survey').addEventListener('submit', function(e) {
-    e.preventDefault();
+        document.getElementById('employee-survey').addEventListener('submit', function(e) {
+            e.preventDefault();
 
-    // Collect all form data
-    let formData = new FormData(this);
+            // Collect all form data
+            let formData = new FormData(this);
 
-    // Handle checkboxes (Job enjoyment)
-    let enjoymentList = Array.from(document.querySelectorAll('input[name="Job_enjoyment[]"]:checked'))
-                             .map(cb => cb.nextElementSibling.innerText.trim())
-                             .join(', ') || 'None';
+            // Add hidden FormSubmit fields
+            formData.append('_captcha', 'false');
+            formData.append('_subject', 'New Employee Survey Submission');
 
-    // Build HTML table
-    let tableHTML = `
-    <html>
-    <head>
-        <style>
-            table { border-collapse: collapse; width: 100%; }
-            th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
-            th { background-color: #f2f2f2; }
-        </style>
-    </head>
-    <body>
-        <h2>New Employee Survey Submission</h2>
-        <table>
-            <tr><th>Question</th><th>Answer</th></tr>
-            <tr><td>How satisfied are you with your current role?</td><td>${formData.get('Job_Role_Satisfaction_Rate') || 'N/A'}</td></tr>
-            <tr><td>How would you rate your work-life balance?</td><td>${formData.get('Work_Life_Balance_Rate') || 'N/A'}</td></tr>
-            <tr><td>What aspects of your job do you enjoy the most?</td><td>${enjoymentList}</td></tr>
-            <tr><td>How would you rate our company culture?</td><td>${formData.get('Company_Culture_Rate') || 'N/A'}</td></tr>
-            <tr><td>Do you feel your contributions are recognized and valued?</td><td>${formData.get('Contributions_are_recognized_and_Valued') || 'N/A'}</td></tr>
-            <tr><td>What is one thing we could improve about our company culture?</td><td>${formData.get('Company_Culture_Improvement') || 'N/A'}</td></tr>
-            <tr><td>Is there any comment on HR & Admin Department?</td><td>${formData.get('HR_Admin_Department_Comment') || 'N/A'}</td></tr>
-            <tr><td>Is there any comment on Accounts Department?</td><td>${formData.get('Accounts_Department_Comment') || 'N/A'}</td></tr>
-            <tr><td>Is there any comment on Management?</td><td>${formData.get('Management_Comment') || 'N/A'}</td></tr>
-            <tr><td>Is there any comment on Operations Department?</td><td>${formData.get('Operations_Department_Comment') || 'N/A'}</td></tr>
-            <tr><td>Is there any comment on IT Department?</td><td>${formData.get('IT_Department_Comment') || 'N/A'}</td></tr>
-            <tr><td>Is there any comment on Other Department?</td><td>${formData.get('Other_Department_Comment') || 'N/A'}</td></tr>
-            <tr><td>Challenges with Employees</td><td>${formData.get('Employee_challenges') || 'N/A'}</td></tr>
-            <tr><td>Other Comments</td><td>${formData.get('Other_Comments') || 'N/A'}</td></tr>
-            <tr><td>Learning & Development Satisfaction</td><td>${formData.get('Learning_and_development_opportunities') || 'N/A'}</td></tr>
-        </table>
-    </body>
-    </html>
-    `;
-
-    // Add HTML table to FormSubmit
-    formData.append('message', tableHTML);
-    formData.append('_captcha', 'false');
-    formData.append('_subject', 'New Employee Survey Submission');
-
-    // Send via AJAX
-    fetch("https://formsubmit.co/ajax/shafeeqsharafi@gmail.com", {
-        method: "POST",
-        body: formData
-    })
-    .then(response => {
-        if (response.ok) {
-            document.querySelector('.container').innerHTML = `
-                <div style="color: green; font-weight: bold; text-align: center; margin-top: 50px;">
-                    ✅ Feedback submitted successfully!
-                </div>
-            `;
-        } else {
-            alert("❌ Error sending survey. Please try again later.");
-        }
-    })
-    .catch(error => {
-        console.error("Error:", error);
-        alert("❌ Could not send your feedback. Check your internet connection.");
-    });
-});
-</script>
+            // Send via AJAX
+            fetch("https://formsubmit.co/ajax/shafeeqsharafi@gmail.com", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => {
+                if (response.ok) {
+                    document.querySelector('.container').innerHTML = `
+                        <div style="color: green; font-weight: bold; text-align: center; margin-top: 50px; margin-botton: 50px;">
+                            ✅ Feedback submitted successfully!
+                        </div>
+                    `;
+                } else {
+                    alert("❌ Error sending survey. Please try again later.");
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                alert("❌ Could not send your feedback. Check your internet connection.");
+            });
+        });
+        </script>
 </body>
 </html>
