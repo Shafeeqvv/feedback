@@ -1,42 +1,33 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+$successMessage = "";
+$errorMessage = "";
 
-    // Recipient email
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $to = "shafeeqsharafi@gmail.com";
     $subject = "New Employee Survey Submission";
 
-    // Helper function to safely get POST data
     function safePost($key) {
         return isset($_POST[$key]) ? htmlspecialchars($_POST[$key]) : '';
     }
 
-    // Ratings
+    // Collect form values
     $roleSatisfaction = safePost('roleSatisfaction');
     $workLifeBalance = safePost('workLifeBalance');
     $companyCulture = safePost('companyCulture');
     $recognition = safePost('recognition');
     $developmentOpportunities = safePost('developmentOpportunities');
-
-    // Textareas
     $cultureImprovement = nl2br(safePost('cultureImprovement'));
     $skillsDevelopment = nl2br(safePost('Other_Comment'));
-
-    // Department comments
     $HR_Admin_Department_Comment = nl2br(safePost('HR_Admin_Department_Comment'));
     $Accounts_Department_Comment = nl2br(safePost('Accounts_Department_Comment'));
     $Management_Comment = nl2br(safePost('Management_Comment'));
     $Operations_Department_Comment = nl2br(safePost('Operations_Department_Comment'));
     $IT_Department_Comment = nl2br(safePost('IT_Department_Comment'));
     $Other_Department_Comment = nl2br(safePost('Other_Department_Comment'));
-
-    // Concern / Challenges with employees
     $employeeConcern = nl2br(safePost('Concern_'));
-
-    // Checkbox group
     $enjoyment = isset($_POST['enjoyment']) ? $_POST['enjoyment'] : [];
     $enjoymentList = !empty($enjoyment) ? implode(", ", array_map('htmlspecialchars', $enjoyment)) : 'None';
 
-    // Prepare HTML email
     $message = "
     <html>
     <head>
@@ -71,19 +62,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </html>
     ";
 
-    // Email headers
     $headers = "MIME-Version: 1.0\r\n";
     $headers .= "Content-type:text/html;charset=UTF-8\r\n";
     $headers .= "From: feedback@mafmep.ae\r\n";
 
-    // Send email
-    if(mail($to, $subject, $message, $headers)) {
-        echo "Survey submitted successfully.";
+    if (mail($to, $subject, $message, $headers)) {
+        $successMessage = "✅ Feedback submitted successfully!";
     } else {
-        echo "Error sending survey. Please try again later.";
+        $errorMessage = "❌ Error sending survey. Please try again later.";
     }
-
-} else {
-    echo "Invalid request.";
 }
 ?>
