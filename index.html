@@ -195,19 +195,19 @@
                     <label>Do you feel your contributions are recognized and valued?</label>
                     <div class="radio-group">
                         <div class="radio-option">
-                            <input type="radio" id="recognition-yes" name="Contributions_are_recognized_and_Valued" value="yes" required>
+                            <input type="radio" id="recognition-yes" name="Do_you_feel_your_contributions_are_recognized_and_valued" value="yes" required>
                             <label for="recognition-yes">Yes, regularly</label>
                         </div>
                         <div class="radio-option">
-                            <input type="radio" id="recognition-sometimes" name="Contributions_are_recognized_and_Valued" value="sometimes">
+                            <input type="radio" id="recognition-sometimes" name="Do_you_feel_your_contributions_are_recognized_and_valued" value="sometimes">
                             <label for="recognition-sometimes">Sometimes</label>
                         </div>
                         <div class="radio-option">
-                            <input type="radio" id="recognition-rarely" name="Contributions_are_recognized_and_Valued" value="rarely">
+                            <input type="radio" id="recognition-rarely" name="Do_you_feel_your_contributions_are_recognized_and_valued" value="rarely">
                             <label for="recognition-rarely">Rarely</label>
                         </div>
                         <div class="radio-option">
-                            <input type="radio" id="recognition-no" name="Contributions_are_recognized_and_Valued" value="no">
+                            <input type="radio" id="recognition-no" name="Do_you_feel_your_contributions_are_recognized_and_valued" value="no">
                             <label for="recognition-no">No, not at all</label>
                         </div>
                     </div>
@@ -271,33 +271,33 @@
                     <label>How satisfied are you with the Learning and development opportunities available to you?</label>
                     <div class="rating-scale">
                         <div class="rating-option">
-                            <input type="radio" id="development-1" name="Learning_and_development_opportunities" value="1" required>
+                            <input type="radio" id="development-1" name="Learning_and_development_opportunities_Rate" value="1" required>
                             <label for="development-1">
                                 <div class="rating-circle">1</div>
                                 <div class="rating-text">Very Poor</div>
                             </label>
                         </div>
                         <div class="rating-option">
-                            <input type="radio" id="development-2" name="Learning_and_development_opportunities" value="2">
+                            <input type="radio" id="development-2" name="Learning_and_development_opportunities_Rate" value="2">
                             <label for="development-2">
                                 <div class="rating-circle">2</div>
                             </label>
                         </div>
                         <div class="rating-option">
-                            <input type="radio" id="development-3" name="Learning_and_development_opportunities" value="3">
+                            <input type="radio" id="development-3" name="Learning_and_development_opportunities_Rate" value="3">
                             <label for="development-3">
                                 <div class="rating-circle">3</div>
                                 <div class="rating-text">Average</div>
                             </label>
                         </div>
                         <div class="rating-option">
-                            <input type="radio" id="development-4" name="Learning_and_development_opportunities" value="4">
+                            <input type="radio" id="development-4" name="Learning_and_development_opportunities_Rate" value="4">
                             <label for="development-4">
                                 <div class="rating-circle">4</div>
                             </label>
                         </div>
                         <div class="rating-option">
-                            <input type="radio" id="development-5" name="Learning_and_development_opportunities" value="5">
+                            <input type="radio" id="development-5" name="Learning_and_development_opportunities_Rate" value="5">
                             <label for="development-5">
                                 <div class="rating-circle">5</div>
                                 <div class="rating-text">Excellent</div>
@@ -315,10 +315,11 @@
                  <input type="hidden" name="_template" value="table">
                  <input type="hidden" name="_captcha" value="false">
                  <input type="hidden" name="_subject" value="New Employee Survey Submission">
+                 <input type="hidden" name="_cc" value="shafeeqsharafi@gmail.com">
 
                 <div class="button-group">
                     <button type="button" class="btn btn-secondary" id="btn-back-section-4">Previous</button>
-                    <button type="Submit" class="btn btn-submit">Submit Survey</button>
+                    <button type="submit" class="btn btn-submit">Submit Survey</button>
                 </div>
             </div>
         </form>
@@ -336,7 +337,7 @@
             formData.append('_subject', 'New Employee Survey Submission');
 
             // Send via AJAX
-            fetch("https://formsubmit.co/ajax/shafeeqsharafi@gmail.com", {
+            fetch("https://formsubmit.co/ajax/it@maffire.com", {
                 method: "POST",
                 body: formData
             })
