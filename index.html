@@ -312,13 +312,14 @@
                     <textarea id="skills-development" name="Other_Comments" placeholder="Describe..."></textarea>
                 </div>
 
+                 <input type="hidden" name="_template" value="table">
+                 <input type="hidden" name="_captcha" value="false">
+                 <input type="hidden" name="_subject" value="New Employee Survey Submission">
+
                 <div class="button-group">
                     <button type="button" class="btn btn-secondary" id="btn-back-section-4">Previous</button>
-                    <input type="submit" class="btn btn-submit">Submit Survey</button>
+                    <button type="Submit" class="btn btn-submit">Submit Survey</button>
                 </div>
-                <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_subject" value="New Employee Survey Submission">
             </div>
         </form>
     </div>
@@ -342,7 +343,7 @@
             .then(response => {
                 if (response.ok) {
                     document.querySelector('.container').innerHTML = `
-                        <div style="color: green; font-weight: bold; text-align: center; margin-top: 50px; margin-botton: 50px;">
+                        <div style="color: green; font-weight: bold; text-align: center; margin:50px;">
                             ✅ Feedback submitted successfully!
                         </div>
                     `;
